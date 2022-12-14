@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            width: 500px;
+            height: 300px;
+            margin: 50px 350px;
+        }
+
+        .box{
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 300px;
+
+        }
+    </style>
+
+    <script>
+        function image_picker(){
+            let pilihan = document.getElementById("select").value;
+            const list_image = ["image1.jpeg", "ww.jpeg", "image3.jpeg", "dk.jpeg", "FL.jpeg", "image6.jpeg"]
+            if(pilihan == "vernon"){
+                let select = list_image[0];
+                document.getElementById("img").src = `${select}`
+            }
+
+            if(pilihan == "wonwoo"){
+                let select = list_image[1];
+                document.getElementById("img").src = `${select}`
+            }
+
+            if(pilihan == "jun"){
+                let select = list_image[2];
+                document.getElementById("img").src = `${select}`
+            }
+
+            if(pilihan == "dokyeom"){
+                let select = list_image[3];
+                document.getElementById("img").src = `${select}`
+            }
+
+            if(pilihan == "felix"){
+                let select = list_image[4];
+                document.getElementById("img").src = `${select}`
+            }
+
+            if(pilihan == "changbin"){
+                let select = list_image[5];
+                document.getElementById("img").src = `${select}`
+            }
+        }
+    </script>
+</head>
+<body>
+    <select name="" id="select" onchange="image_picker()">
+        <option value="">Choose ur bias!</option>
+        <option value="vernon">vernon</option>
+        <option value="wonwoo">wonwoo</option>
+        <option value="jun">jun</option>
+        <option value="dokyeom">dokyeom</option>
+        <option value="felix">felix</option>
+        <option value="changbin">changbin</option>
+    </select>
+    <br>
+    <div class="container">
+        <div class="box">
+            <img id="img">
+        </div>
+    </div>
+</body>
+</html>
